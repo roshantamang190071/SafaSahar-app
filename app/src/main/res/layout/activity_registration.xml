@@ -1,9 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrationActivity">
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".ui.RegistrationActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fullNameContainer"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:helperText="@string/required"
+        app:helperTextTextColor="#FF0000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fullNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:inputType="text"
+            android:lines="1">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneNumberContainer"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:counterMaxLength="10"
+        app:helperText="@string/required"
+        app:helperTextTextColor="#FF0000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="10">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordContainer"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:counterMaxLength="16"
+        app:helperText="@string/required"
+        app:helperTextTextColor="#FF0000"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="16">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confirmPasswordContainer"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:counterMaxLength="16"
+        app:helperText="@string/required"
+        app:helperTextTextColor="#FF0000"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirmPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="16">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Register" />
+
+    <!--    &lt;!&ndash;    <androidx.cardview.widget.CardView&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_width="120dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_height="120dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_gravity="center"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_marginVertical="20dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        app:cardCornerRadius="100dp">&ndash;&gt;-->
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:src="@drawable/logo" />-->
+
+    <!--    &lt;!&ndash;    </androidx.cardview.widget.CardView>&ndash;&gt;-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:text="Register"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textSize="40dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:textStyle="bold" />-->
+
+    <!--&lt;!&ndash;    <androidx.cardview.widget.CardView&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_marginTop="20dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        app:cardCornerRadius="25dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        app:cardElevation="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_marginBottom="60dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        app:cardMaxElevation="12dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        app:cardPreventCornerOverlap="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;        app:cardUseCompatPadding="true">&ndash;&gt;-->
+
+    <!--        <ScrollView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="center"-->
+    <!--                android:background="@color/white"-->
+    <!--                android:orientation="vertical">-->
+
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="40dp"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="Email"-->
+    <!--                    android:textSize="20dp" />-->
+
+    <!--                <EditText-->
+    <!--                    android:id="@+id/etEmail"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="40sp"-->
+    <!--                    android:layout_marginHorizontal="50sp"-->
+    <!--                    android:layout_marginVertical="10sp"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:inputType="text"-->
+    <!--                    android:textSize="20sp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="FullName"-->
+    <!--                    android:textSize="20dp" />-->
+
+    <!--                <EditText-->
+    <!--                    android:id="@+id/etFullName"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="40sp"-->
+    <!--                    android:layout_marginHorizontal="50sp"-->
+    <!--                    android:layout_marginVertical="10sp"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:inputType="text"-->
+    <!--                    android:textSize="20sp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="Address"-->
+    <!--                    android:textSize="20dp" />-->
+
+    <!--                <EditText-->
+    <!--                    android:id="@+id/etAddress"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="40sp"-->
+    <!--                    android:layout_marginHorizontal="50sp"-->
+    <!--                    android:layout_marginVertical="10sp"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:inputType="text"-->
+    <!--                    android:textSize="20sp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="Phone Number"-->
+    <!--                    android:textSize="20dp" />-->
+
+    <!--                <EditText-->
+    <!--                    android:id="@+id/etPhoneNumber"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="40sp"-->
+    <!--                    android:layout_marginHorizontal="50sp"-->
+    <!--                    android:layout_marginVertical="10sp"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:inputType="text"-->
+    <!--                    android:textSize="20sp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="Password"-->
+    <!--                    android:textSize="20dp" />-->
+
+    <!--                <EditText-->
+    <!--                    android:id="@+id/etPassword"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="40sp"-->
+    <!--                    android:layout_marginHorizontal="50sp"-->
+    <!--                    android:layout_marginVertical="10sp"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:inputType="text"-->
+    <!--                    android:textSize="20sp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="Confirm Password"-->
+    <!--                    android:textSize="20dp" />-->
+
+    <!--                <EditText-->
+    <!--                    android:id="@+id/etConfirmPassword"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="40sp"-->
+    <!--                    android:layout_marginHorizontal="50sp"-->
+    <!--                    android:layout_marginVertical="10sp"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:inputType="text"-->
+    <!--                    android:textSize="20sp" />-->
+
+
+    <!--                <Button-->
+    <!--                    android:id="@+id/btnRegister"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_gravity="center"-->
+    <!--                    android:backgroundTint="@color/black"-->
+    <!--                    android:text="Register" />-->
+    <!--            </LinearLayout>-->
+    <!--        </ScrollView>-->
+
+    <!--&lt;!&ndash;    </androidx.cardview.widget.CardView>&ndash;&gt;-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Already Have an account? Log in" />
+</LinearLayout>
