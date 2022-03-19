@@ -8,6 +8,32 @@
     android:orientation="vertical"
     tools:context=".ui.RegistrationActivity">
 
+        <!--    <androidx.cardview.widget.CardView-->
+        <!--        android:layout_width="120dp"-->
+        <!--        android:layout_height="120dp"-->
+        <!--        android:layout_gravity="center"-->
+        <!--        android:layout_marginVertical="20dp"-->
+        <!--        app:cardCornerRadius="100dp">-->
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo" />
+
+        <!--    </androidx.cardview.widget.CardView>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Register"
+            android:textColor="@color/black"
+            android:textSize="40dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold" />
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fullNameContainer"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
@@ -104,36 +130,15 @@
 
 
     <com.google.android.material.button.MaterialButton
+        android:textAllCaps="true"
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
         android:layout_gravity="center"
+        android:layout_marginVertical="10dp"
         android:text="Register" />
 
-    <!--    &lt;!&ndash;    <androidx.cardview.widget.CardView&ndash;&gt;-->
-    <!--    &lt;!&ndash;        android:layout_width="120dp"&ndash;&gt;-->
-    <!--    &lt;!&ndash;        android:layout_height="120dp"&ndash;&gt;-->
-    <!--    &lt;!&ndash;        android:layout_gravity="center"&ndash;&gt;-->
-    <!--    &lt;!&ndash;        android:layout_marginVertical="20dp"&ndash;&gt;-->
-    <!--    &lt;!&ndash;        app:cardCornerRadius="100dp">&ndash;&gt;-->
-
-    <!--    <ImageView-->
-    <!--        android:layout_width="100dp"-->
-    <!--        android:layout_height="100dp"-->
-    <!--        android:layout_gravity="center"-->
-    <!--        android:src="@drawable/logo" />-->
-
-    <!--    &lt;!&ndash;    </androidx.cardview.widget.CardView>&ndash;&gt;-->
-
-    <!--    <TextView-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_gravity="center"-->
-    <!--        android:text="Register"-->
-    <!--        android:textColor="@color/black"-->
-    <!--        android:textSize="40dp"-->
-    <!--        android:layout_marginBottom="10dp"-->
-    <!--        android:textStyle="bold" />-->
 
     <!--&lt;!&ndash;    <androidx.cardview.widget.CardView&ndash;&gt;-->
     <!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
@@ -280,5 +285,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
+        android:layout_marginVertical="20dp"
         android:text="Already Have an account? Log in" />
 </LinearLayout>
