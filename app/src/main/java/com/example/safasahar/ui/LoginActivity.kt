@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import api.ServiceBuilder
 import com.example.safasahar.databinding.ActivityLoginBinding
-import com.example.safasahar.databinding.ActivityRegistrationBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -133,6 +132,9 @@ class LoginActivity : AppCompatActivity() {
     private fun validPhoneNumber(): String? {
 
         val phoneNumberText = binding.phoneNumberEditText.text.toString()
+        if(phoneNumberText == ""){
+            return "Required"
+        }
         if (phoneNumberText.length != 10) {
             return "Invalid phone number"
         }
@@ -147,6 +149,9 @@ class LoginActivity : AppCompatActivity() {
 
         val passwordText = binding.passwordEditText.text.toString()
 
+        if(passwordText == ""){
+            return "Required"
+        }
         if (passwordText.length < 8) {
             return "Minimum 8 characters required!"
         }
