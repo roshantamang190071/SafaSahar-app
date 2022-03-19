@@ -115,7 +115,7 @@ class RegistrationActivity : AppCompatActivity() {
                         startActivity(
                             Intent(
                                 this@RegistrationActivity,
-                                MainActivity::class.java
+                                LoginActivity::class.java
                             )
                         )
                     }

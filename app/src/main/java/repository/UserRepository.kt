@@ -19,4 +19,12 @@ class UserRepository: MyApiRequest() {
         }
     }
 
+    suspend fun loginUser(phoneNumber : String, password : String) : UserResponse{
+        return  apiRequest {
+            userApi.login(phoneNumber, password)
+        }
+    }
+
+
+
 }
