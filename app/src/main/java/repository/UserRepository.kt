@@ -4,7 +4,6 @@ import api.MyApiRequest
 import api.ServiceBuilder
 import api.UserAPI
 import model.UserModel
-import okhttp3.MultipartBody
 import response.UserResponse
 
 

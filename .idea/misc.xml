@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Individual/SafaSahar-app/app/src/main/res/drawable/circle.xml" value="0.19" />
+        <entry key="..\:/Individual/SafaSahar-app/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.139" />
         <entry key="..\:/Individual/SafaSahar-app/app/src/main/res/drawable/loginlogo.xml" value="0.128" />
         <entry key="..\:/Individual/SafaSahar-app/app/src/main/res/layout/activity_login.xml" value="0.136" />
         <entry key="..\:/Individual/SafaSahar-app/app/src/main/res/layout/activity_main.xml" value="0.14407866609662248" />
         <entry key="..\:/Individual/SafaSahar-app/app/src/main/res/layout/activity_registration.xml" value="0.144" />
+        <entry key="..\:/Individual/SafaSahar-app/app/src/main/res/layout/activity_user_dashboard.xml" value="0.152" />
       </map>
     </option>
   </component>

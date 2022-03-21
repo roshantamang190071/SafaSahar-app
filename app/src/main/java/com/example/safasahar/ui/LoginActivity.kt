@@ -71,29 +71,37 @@ class LoginActivity : AppCompatActivity() {
                     ServiceBuilder.token = "Bearer ${response.token}"
                     ServiceBuilder.userId = response.data
                     //Save username and password in shared preferences
-                    //saveUsernamePassword()
+                    saveUsernamePassword()
                     startActivity(
                         Intent(
                             this@LoginActivity,
-                            MainActivity::class.java
+                            UserDashboard::class.java
                         )
                     )
                     //showNotification()
                     finish()
                 } else {
                     withContext(Dispatchers.Main) {
-                        Toast.makeText(this@LoginActivity, "Invalid credentials!!!", Toast.LENGTH_SHORT).show()
+
+                        AlertDialog.Builder(this@LoginActivity)
+                        .setTitle("Login failed!")
+                        .setMessage("Invalid Credentials!")
+                        .setPositiveButton("Ok"){ _, _ ->
+
+                        }.show()
+
                     }
                 }
             } catch (ex: Exception) {
                 withContext(Dispatchers.Main) {
                     Log.d("Error", ex.toString())
 
-                    Toast.makeText(
-                        this@LoginActivity,
-                        "Network error!",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    AlertDialog.Builder(this@LoginActivity)
+                        .setTitle("Unable to login!")
+                        .setMessage("Invalid Credentials!")
+                        .setPositiveButton("Ok"){ _, _ ->
+
+                        }.show()
                 }
             }
 
@@ -104,7 +112,7 @@ class LoginActivity : AppCompatActivity() {
     private fun invalidForm() {
 
         AlertDialog.Builder(this)
-            .setTitle("Invalid Form!")
+            .setTitle("Invalid Login!")
             .setMessage("Please try again!")
             .setPositiveButton("Back") { _, _ ->
                 //do nothing
@@ -135,12 +143,6 @@ class LoginActivity : AppCompatActivity() {
         if(phoneNumberText == ""){
             return "Required"
         }
-        if (phoneNumberText.length != 10) {
-            return "Invalid phone number"
-        }
-        if (!phoneNumberText.matches(".*[0-9].*".toRegex())) {
-            return "Cannot contain alphabets or special characters!"
-        }
         return null
 
     }
@@ -152,19 +154,21 @@ class LoginActivity : AppCompatActivity() {
         if(passwordText == ""){
             return "Required"
         }
-        if (passwordText.length < 8) {
-            return "Minimum 8 characters required!"
-        }
-        if (!passwordText.matches(".*[A-Z].*".toRegex())) {
-            return "Must contain one uppercase character!"
-        }
-        if (!passwordText.matches(".*[a-z].*".toRegex())) {
-            return "Must contain one lowercase character!"
-        }
-        if (!passwordText.matches(".*[@#$%&*!].*".toRegex())) {
-            return "Must contain one special character(@#$%&*!)!"
-        }
 
         return null
     }
+
+
+    private fun saveUsernamePassword() {
+
+        val phoneNumber = binding.phoneNumberEditText.text.toString()
+        val password = binding.passwordEditText.text.toString()
+        val sharedPref = getSharedPreferences("user", MODE_PRIVATE)
+        val editor = sharedPref.edit()
+
+        editor.putString("phoneNumber", phoneNumber)
+        editor.putString("password", password)
+        editor.apply()
+    }
+
 }

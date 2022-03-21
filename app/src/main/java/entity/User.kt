@@ -12,5 +12,5 @@ data class User (
     var profile_pic : String? =null
 ){
     @PrimaryKey
-    var userID : String = ""
+    var userId : String = ""
 }
